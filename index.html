@@ -27,22 +27,78 @@
         </nav>
         <div class="user-block">
           <a class="search" href="#">Поиск</a>
+          <div class="search-block">
+          	<input type="search" placeholder="Что ищем?" name="search-input">
+          </div>
           <a class="login" href="#">Вход</a>
+          <div class="sign-block">
+          	<input type="email" name="sing-email-input" placeholder="Электронная почта">
+            <input type="password" name="sign-password-input" placeholder="Пароль">
+            <a class="btn" href="#">Войти</a>
+            <div class="sing-block-links">
+            	<a class="sign-block-link" href="#">Забыли пароль?</a>
+              <a class="sign-block-link" href="#">Новая регистрация</a>
+            </div>
+          </div>
           <a class="cart" href="#">Корзина</a>
+          <div class="cart-block">
+          	<table class="user-cart">
+            	<tr>
+              	<td><a class="del-btn">X</a></td>
+                <td>
+                	<div class="cart-item-img">
+                  	<img src="img/img-1.jpg" alt="Пломбир с апельсиновым джемом">
+                  </div>
+                </td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td>1,5 кг х <span class="cart-item-price">200 руб.</span></td>
+                <td>300 руб.</td>
+              </tr>
+            	<tr>
+              	<td><a class="del-btn">X</a></td>
+                <td>
+                	<div class="cart-item-img">
+                  	<img src="img/img-2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  </div>
+                </td>
+                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td>1,5 кг х <span class="cart-item-price">300 руб.</span></td>
+                <td>450 руб.</td>
+              </tr>
+              <tr>
+              	<td colspan="5" class="total">Итого: 750 руб.</td>
+              </tr>
+            </table>
+            <a class="btn" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="main-info">
       	С 10 до 20, ежедневно <span>8 812 450-25-25</span>
       </div>
       <div class="carusel">
-        <div class="carusel-image">
-        	<img src="img/carusel-1.jpg" alt="Глейси крем-брюле">
-          <img src="img/carusel-2.jpg" alt="Глейси малиновый джем">
+      	<div class="carusel-item active">
+          <div class="carusel-item-image">
+            <img src="img/carusel-1.jpg" alt="Глейси крем-брюле">
+            <img src="img/carusel-2.jpg" alt="Глейси малиновый джем">
+          </div>
+          <div class="carusel-item-promo">Крем-брюле и пломбир с малиновым джемом</div>
         </div>
-        <div class="carusel-promo">
-          <span>Крем-брюле и пломбир <br>с малиновым джемом</span>
-          <a class="btn" href="#">Давайте оба!</a>
+        <div class="carusel-item">
+          <div class="carusel-item-image">
+            <img src="img/carusel-3.jpg" alt="Глейси шоколадный пломбир">
+            <img src="img/carusel-4.jpg" alt="Глейси лимонный сорбет">
+          </div>
+          <div class="carusel-item-promo">Шоколадный пломбир и лимонный сорбет</div>
         </div>
+        <div class="carusel-item">
+          <div class="carusel-item-image">
+            <img src="img/carusel-5.jpg" alt="Глейси пломбир с помадкой">
+            <img src="img/carusel-6.jpg" alt="Глейси клубничный щербет">
+          </div>
+          <div class="carusel-item-promo">Пломбир с помадкой и клубничный щербет</div>
+        </div>
+        <a class="btn" href="#">Давайте оба!</a>
         <ol class="carusel-indicators">
           <li class="active"></li>
           <li></li>
@@ -52,14 +108,14 @@
     </header>
     <main>
       <div class="banners">
-        <article class="banners-leftblock">
-          <h2>Малинка даром!</h2>
-          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+        <article class="banners-container">
+          <h2 class="banners-header">Малинка даром!</h2>
+          <p class="banners-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="btn" href="#">Хочу варенье!</a>
         </article>
-        <article class="banners-rightblock">
-          <h2>Шоколадки даром!</h2>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+        <article class="banners-container">
+          <h2 class="banners-header">Шоколадки даром!</h2>
+          <p class="banners-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="btn" href="#">Хочу варенье!</a>
         </article>
       </div>
@@ -67,35 +123,47 @@
       <div class="hits">
         <div class="hits-item">
           <div class="sticker">Хит</div>
-          <div class="hits-item-image">
-            <img src="img/assortment/img-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <div class="hits-item-main">
+            <div class="hits-item-image">
+              <img src="img/assortment/img-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            </div>
+            <div class="hits-item-price">310<span class="currency">Р</span> <span class="units">/кг</span></div>
+            <div class="hits-item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</div>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </div>
-          <div class="hits-item-price">310<span class="valute">Р</span> <span class="units">/кг</span></div>
-          <div class="hits-item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</div>
         </div>
         <div class="hits-item">
           <div class="sticker">Хит</div>
-          <div class="hits-item-image">
-            <img src="img/assortment/img-2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
+          <div class="hits-item-main">
+            <div class="hits-item-image">
+              <img src="img/assortment/img-2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
+            </div>
+            <div class="hits-item-price">380<span class="currency">Р</span> <span class="units">/кг</span></div>
+            <div class="hits-item-description">Сливочно-кофейное с кусочками шоколада</div>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </div>
-          <div class="hits-item-price">380<span class="valute">Р</span> <span class="units">/кг</span></div>
-          <div class="hits-item-description">Сливочно-кофейное с кусочками шоколада</div>
         </div>
         <div class="hits-item">
           <div class="sticker">Хит</div>
-          <div class="hits-item-image">
-            <img src="img/assortment/img-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <div class="hits-item-main">
+            <div class="hits-item-image">
+              <img src="img/assortment/img-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            </div>
+            <div class="hits-item-price">355<span class="currency">Р</span> <span class="units">/кг</span></div>
+            <div class="hits-item-description">Сливочно-клубничное с присыпкой из белого шоколада</div>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </div>
-          <div class="hits-item-price">355<span class="valute">Р</span> <span class="units">/кг</span></div>
-          <div class="hits-item-description">Сливочно-клубничное с присыпкой из белого шоколада</div>
         </div>
         <div class="hits-item">
           <div class="sticker">Хит</div>
-          <div class="hits-item-image">
-            <img src="img/assortment/img-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
+          <div class="hits-item-main">
+            <div class="hits-item-image">
+              <img src="img/assortment/img-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
+            </div>
+            <div class="hits-item-price">415<span class="currency">Р</span> <span class="units">/кг</span></div>
+            <div class="hits-item-description">Сливочное крем-брюле с карамельной подливкой</div>
+            <a class="btn" href="#">Быстрый просмотр</a>
           </div>
-          <div class="hits-item-price">415<span class="valute">Р</span> <span class="units">/кг</span></div>
-          <div class="hits-item-description">Сливочное крем-брюле с карамельной подливкой</div>
         </div>
       </div>
       
@@ -151,6 +219,24 @@
         </div>
       </div>
     </main>
+    <div class="feedback">
+    	<a class="close-btn">Закрыть</a>
+    	<div class="feedback-header">Мы обязательно вам ответим!</div>
+      <form name="feedback" action="/" method="post">
+      	<div class="feedback-input">
+        	<input type="text" name="username" placeholder="Как вас зовут?">
+        </div>
+        <div class="feedback-input">
+        	<input type="email" name="useremail" placeholder="Ваша почта для ответа?">
+        </div>
+        <div class="feedback-textarea">
+	        <textarea name="usermessage" cols="20" rows="6">Напишите что-нибудь...</textarea>
+        </div>
+        <div class="feedback-button">
+        	<a class="btn" href="#">Отправить</a>
+        </div>
+      </form>
+    </div>
     <footer>
       <div class="container">
       	<div class="footer-social">
