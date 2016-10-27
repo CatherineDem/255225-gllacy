@@ -92,11 +92,17 @@
           <div class="carusel-item-promo">Пломбир с помадкой и клубничный щербет</div>
         </div>
         <a class="btn" href="#">Давайте оба!</a>
-        <ol class="carusel-indicators">
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-        </ol>
+        <ul class="carusel-indicators">
+          <li class="active">
+            <input type="radio" name="carusel-input" id="carusel-input1" checked>  
+          </li>
+          <li>
+            <input type="radio" name="carusel-input" id="carusel-input2">
+          </li>
+          <li>
+            <input type="radio" name="carusel-input" id="carusel-input3">
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -121,7 +127,9 @@
           </div>
           <div class="catalog-item-price">310<span class="currency">Р</span> <span class="units">/кг</span></div>
           <h2 class="catalog-item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
-          <a class="btn" href="#">Быстрый просмотр</a>
+          <div class="catalog-item-bg">
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </div>
         </article>
         <article class="catalog-item">
           <div class="sticker">Хит</div>
@@ -130,7 +138,9 @@
           </div>
           <div class="catalog-item-price">380<span class="currency">Р</span> <span class="units">/кг</span></div>
           <h2 class="catalog-item-description">Сливочно-кофейное с кусочками шоколада</h2>
-          <a class="btn" href="#">Быстрый просмотр</a>
+          <div class="catalog-item-bg">
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </div>
         </article>
         <article class="catalog-item">
           <div class="sticker">Хит</div>
@@ -139,7 +149,9 @@
           </div>
           <div class="catalog-item-price">355<span class="currency">Р</span> <span class="units">/кг</span></div>
           <h2 class="catalog-item-description">Сливочно-клубничное с присыпкой из белого шоколада</h2>
-          <a class="btn" href="#">Быстрый просмотр</a>
+          <div class="catalog-item-bg">
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </div>
         </article>
         <article class="catalog-item">
           <div class="sticker">Хит</div>
@@ -148,7 +160,9 @@
           </div>
           <div class="hits-item-price">415<span class="currency">Р</span> <span class="units">/кг</span></div>
           <h2 class="hits-item-description">Сливочное крем-брюле с карамельной подливкой</h2>
-          <a class="btn" href="#">Быстрый просмотр</a>
+          <div class="catalog-item-bg">
+            <a class="btn" href="#">Быстрый просмотр</a>
+          </div>
         </article>
       </div>
       
@@ -179,7 +193,7 @@
       <div class="blog">
         <div class="blog-news">
           <div class="blog-news-header">Новое в нашем блоге</div>
-          <div class="blog-news-article-header">10  способов сервировки фруктовых щербетов к столу</div>
+          <a class="blog-news-article-header" href="#">10  способов сервировки фруктовых щербетов к столу</a>
         </div>
         <div class="blog-subscribe">
           <p class="blog-subscribe-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
@@ -219,7 +233,7 @@
 	        <textarea name="usermessage" id="usermessage" cols="20" rows="6">Напишите что-нибудь...</textarea>
         </div>
         <div class="feedback-button">
-          <a class="btn" href="#">Отправить</a>
+          <button class="form-btn" type="submit">Отправить</button>
         </div>
       </form>
     </div>
