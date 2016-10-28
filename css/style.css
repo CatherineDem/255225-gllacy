@@ -1,42 +1,49 @@
 /* CSS Document */
 
-@font-face{
+@font-face {
   font-family: 'Roboto';
   src: url('/fonts/roboto.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face{
+@font-face {
   font-family: 'Roboto';
   src: url('/fonts/robotomedium.woff') format('woff');
-  font-weight:bold;
+  font-weight: bold;
   font-style: normal;
 }
 
 
-body{
-  font-size:16px;
-  line-height:22px;
-  color:#323232;
-  font-weight:normal;
-  font-family:Roboto, Arial, sans-serif;  
+body {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: normal;
+  font-family: 'Roboto', Arial, sans-serif;  
 }
 
-h1.page-header{
-  font-size:31px;
-  line-height:41px;
-  color:#ffffff;
-  font-weight:bold;
+.page-header {
+  font-size: 31px;
+  line-height: 41px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
-h2.banners-header{
-  font-size:35px;
-  line-height:41px;
-  color:#ffffff;
-  font-weight:bold;
+.banners-header {
+  font-size: 35px;
+  line-height: 41px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
+.catalog-item-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: underline;
+}
 
 
 
