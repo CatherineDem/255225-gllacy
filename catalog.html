@@ -43,56 +43,61 @@
         </nav>
         <div class="user-block">
           <a class="search" href="#">Поиск</a>
-          <div class="search-block">
+          <a class="login" href="#">Вход</a>
+          <a class="cart-full" href="#">2 товара</a>
+        </div>
+        <div class="search-block forms">
             <div class="block-input">
               <label for="search-input">Что ищем?</label>
-              <input type="search" name="search-input" id="search-input" placeholder="Что ищем?">
+              <input type="search" placeholder="Что ищем?" name="search-input" id="search-input">
             </div>
+        </div>
+        <div class="sign-block forms">
+          <div class="block-input">
+            <label for="sing-email-input">Электронная почта</label>
+            <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта">
           </div>
-          <a class="login" href="#">Вход</a>
-          <div class="sign-block">
-            <div class="block-input">
-              <label for="sing-email-input">Электронная почта</label>
-              <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта">
+          <div class="block-input">
+            <label for="sign-password-input">Пароль</label>
+            <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль">
+          </div>
+          <div class="forms-wrapper">
+            <div class="sign-block-btn">
+              <a class="btn" href="#">Войти</a>
             </div>
-            <div class="block-input">
-              <label for="sign-password-input">Пароль</label>
-              <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль">
-            </div>
-            <a class="btn" href="#">Войти</a>
             <div class="sing-block-links">
               <a class="sign-block-link" href="#">Забыли пароль?</a>
               <a class="sign-block-link" href="#">Новая регистрация</a>
             </div>
           </div>
-          <a class="cart-full" href="#">2 товара</a>
-          <div class="cart-block">
-            <table class="user-cart">
-              <tr>
-                <td><a class="del-btn">X</a></td>
-                <td>
-                  <img src="img/catalog_1_1.png" alt="Пломбир с апельсиновым джемом">
-                </td>
-                <td>Пломбир с апельсиновым джемом</td>
-                <td>1,5 кг х <span class="cart-item-price">200 руб.</span></td>
-                <td>300 руб.</td>
-              </tr>
-              <tr>
-                <td><a class="del-btn">X</a></td>
-                <td>
-                  <img src="img/catalog_1_3.png" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                </td>
-                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td>1,5 кг х <span class="cart-item-price">300 руб.</span></td>
-                <td>450 руб.</td>
-              </tr>
-              <tr>
-                <td colspan="5" class="total">Итого: 750 руб.</td>
-              </tr>
-            </table>
-            <a class="btn" href="#">Оформить заказ</a>
-          </div>
+        </div>         
+        <div class="cart-block forms">
+          <table class="user-cart">
+            <tr>
+              <td><a class="del-btn">X</a></td>
+              <td>
+                <img src="img/catalog_1_1.png" alt="Пломбир с апельсиновым джемом">
+              </td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг х <span class="cart-item-price">200 руб.</span></td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td><a class="del-btn">X</a></td>
+              <td>
+                <img src="img/catalog_1_3.png" alt="Клубничный пломбир с присыпкой из белого шоколада">
+              </td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг х <span class="cart-item-price">300 руб.</span></td>
+              <td>450 руб.</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="total">Итого: 750 руб.</td>
+            </tr>
+          </table>
+          <a class="btn" href="#">Оформить заказ</a>
         </div>
+      </div>
       </div>
     </header>
     
@@ -187,7 +192,7 @@
           </form>
         </div>
         
-        <div class="catalog clearfix">
+        <div class="catalog">
           <article class="catalog-item">
             <div class="catalog-item-image">
               <img src="img/catalog_1_1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -356,7 +361,7 @@
           <div class="footer-copyright">
             <div class="footer-copyright-wrapper">
               <img class="copyright-logo" src="img/htmlacademy_logo.png" alt="HTML Academy">
-              <p>Сделано в: <a class="btn" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>
+              <p>Сделано в: <a class="minlink" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>
             </div>
           </div>
         </div>  

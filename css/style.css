@@ -35,10 +35,7 @@ body {
 
 .main-header {
   /* здесь и далее background или outline добавлен только для наглядоности согласно условиям домашнего задания  */
-  position: relative;
-  z-index: 1;
   width: auto;
-
 }
 
 .container {
@@ -48,7 +45,7 @@ body {
   margin: 0 auto;
   vertical-align: middle;
   outline: 2px solid #A9FF00;
-  
+  position: relative;
 }
 
 .clearfix::after {
@@ -92,13 +89,153 @@ body {
   outline: 2px solid #ffffff;
 }
 
-.user-block > div {
-  display:none;
+.forms {
+  /*display:block;*/
+  position: absolute;
+  background-color: #f8f7f4;
+  padding: 22px 17px;
+}
+
+.forms input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 41px;
+  margin-bottom: 20px;
+}
+
+.forms textarea {
+  height: 155px;
+}
+
+.forms label {
+  display: none;
+  width: auto;
+}
+
+.forms-wrapper {
+  width: 100%;
+  font-size: 0px;
+}
+
+.forms-wrapper > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.forms-wrapper > div:not(:last-child){
+  margin-right: 20px;
+}
+
+.sing-block-links {
+  width: 120px;
+  margin-right: 0px;
+  outline: 1px solid #CD1B1E;
+}
+
+.sing-block-links a {
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.btn {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  width: 101px;
+  height: 45px;
+  outline: 1px solid #CD1B1E; 
+}
+
+.search-block {
+  width: 307px;
+  height: 40px;
+  top: 60px;
+  left: 50%;
+  z-index: 3;
+  display: none;
+}
+
+.sign-block {
+  width: 243px;
+  height: 190px;
+  top: 60px;
+  right: 13.3%;
+  z-index: 2;
+  display:none; 
+}
+
+.feedback {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  top: 10%;
+  left: 25%;
+  width: 444px;
+  height: 399px;
+  }
+
+.feedback-header {
+  margin-bottom: 26px;
+}
+
+.feedback-button {
+  float: right;
+}
+
+.close-btn {
+  display: block;
+  width: 23px;
+  height: 23px;
+  float: right;
+  outline: 1px solid #1AC72E;
 }
 
 .cart-block {
   display: none;
+  position: absolute;
+  top: 50px;
+  right: 2.3%;
+  z-index:5;
 }
+
+.cart-block img {
+  width: 38px;
+  height: 38px;
+}
+
+.del-btn {
+  width: 15px;
+  height: 15px;
+  display: block;
+  outline: 1px solid #CD2628;
+}
+
+.user-cart {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-cart td {
+  padding: 10px 7px;
+  max-width: 230px;
+  vertical-align: middle;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.user-cart .total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  border-top: 1px solid #cacac7;
+}
+
+.cart-block .btn {
+  float: right;
+}
+
 
 .page-header-container {
    display: block; 
@@ -339,8 +476,8 @@ body {
   padding: 34px 25px;
 }
 
-.feedback {
-  display: none;
+.location .btn {
+  width: 252px;
 }
 
 

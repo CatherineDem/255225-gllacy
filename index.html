@@ -43,29 +43,33 @@
         </nav>
         <div class="user-block">
           <a class="search" href="#">Поиск</a>
-          <div class="search-block">
+          <a class="login" href="#">Вход</a>
+          <a class="cart" href="#">Корзина</a>
+        </div>
+        <div class="search-block forms">
             <div class="block-input">
               <label for="search-input">Что ищем?</label>
               <input type="search" placeholder="Что ищем?" name="search-input" id="search-input">
             </div>
+        </div>
+        <div class="sign-block forms">
+          <div class="block-input">
+            <label for="sing-email-input">Электронная почта</label>
+            <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта">
           </div>
-          <a class="login" href="#">Вход</a>
-          <div class="sign-block">
-            <div class="block-input">
-              <label for="sing-email-input">Электронная почта</label>
-              <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта">
+          <div class="block-input">
+            <label for="sign-password-input">Пароль</label>
+            <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль">
+          </div>
+          <div class="forms-wrapper">
+            <div class="sign-block-btn">
+              <a class="btn" href="#">Войти</a>
             </div>
-            <div class="block-input">
-              <label for="sign-password-input">Пароль</label>
-              <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль">
-            </div>
-            <a class="btn" href="#">Войти</a>
             <div class="sing-block-links">
               <a class="sign-block-link" href="#">Забыли пароль?</a>
               <a class="sign-block-link" href="#">Новая регистрация</a>
             </div>
           </div>
-          <a class="cart" href="#">Корзина</a>
         </div>
       </div>
     </header>
@@ -201,6 +205,27 @@
             </form>
           </div>
         </div>
+        <div class="feedback forms">
+          <a class="close-btn"></a>
+          <div class="feedback-header">Мы обязательно вам ответим!</div>
+          <form name="feedback" action="/" method="post">
+            <div class="block-input">
+              <label for="username">Как вас зовут?</label>
+              <input type="text" name="username" id="username" placeholder="Как вас зовут?">
+            </div>
+            <div class="block-input">
+              <label for="useremail">Ваша почта для ответа?</label>
+              <input type="email" name="useremail" id="useremail" placeholder="Ваша почта для ответа?">
+            </div>
+            <div class="block-textarea">
+              <label for="usermessage">Напишите что-нибудь...</label>
+              <textarea name="usermessage" id="usermessage" cols="20" rows="6">Напишите что-нибудь...</textarea>
+            </div>
+            <div class="feedback-button">
+              <button class="btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
       </div>
       <div class="container location">
         <div class="location-address">
@@ -213,27 +238,7 @@
         </div>
       </div>
     </main>
-    <div class="feedback">
-    	<a class="close-btn">Закрыть</a>
-    	<div class="feedback-header">Мы обязательно вам ответим!</div>
-      <form name="feedback" action="/" method="post">
-      	<div class="block-input">
-          <label for="username">Как вас зовут?</label>
-          <input type="text" name="username" id="username" placeholder="Как вас зовут?">
-        </div>
-        <div class="block-input">
-          <label for="useremail">Ваша почта для ответа?</label>
-          <input type="email" name="useremail" id="useremail" placeholder="Ваша почта для ответа?">
-        </div>
-        <div class="block-textarea">
-          <label for="usermessage">Напишите что-нибудь...</label>
-	        <textarea name="usermessage" id="usermessage" cols="20" rows="6">Напишите что-нибудь...</textarea>
-        </div>
-        <div class="feedback-button">
-          <button class="form-btn" type="submit">Отправить</button>
-        </div>
-      </form>
-    </div>
+    
     <footer>
       <div class="container clearfix">
         <div class="footer-wrapper">
@@ -272,7 +277,7 @@
           <div class="footer-copyright">
             <div class="footer-copyright-wrapper">
               <img class="copyright-logo" src="img/htmlacademy_logo.png" alt="HTML Academy">
-              <p>Сделано в: <a class="btn" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>
+              <p>Сделано в: <a class="minlink" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>
             </div>
           </div>
         </div>  
