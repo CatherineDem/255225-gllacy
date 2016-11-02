@@ -22,6 +22,7 @@
 html, 
 body {
   min-width: 900px;
+  background-color: #849d8f;
 }
 
 body {
@@ -34,18 +35,20 @@ body {
 
 .main-header {
   /* здесь и далее background или outline добавлен только для наглядоности согласно условиям домашнего задания  */
-  background-color: #B4FDB1;
+  position: relative;
+  z-index: 1;
   width: auto;
-  padding-top:10px;
+
 }
 
 .container {
-  background-color: #8DD1CC;
   max-width: 1112px;
   padding-left: 2.3%;
   padding-right:2.3%;
   margin: 0 auto;
   vertical-align: middle;
+  outline: 2px solid #A9FF00;
+  
 }
 
 .clearfix::after {
@@ -56,14 +59,15 @@ body {
 
 .main-logo {
   margin-left: -6px;
-  float:left;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 10px;
 }
 
 .main-navigation {
-  background-color: #ffffff;
-  float:left;
+  display: inline-block;
+  vertical-align: middle;
   width: 355px;
-  margin-top: 20px;
   margin-left: 25px;
 }
 
@@ -82,11 +86,10 @@ body {
 }
 
 .user-block {
-  background-color: #FFFEC8;
-  float: right;
   width: 260px;
-  padding-top: 0px;
-  margin-top: 20px;
+  float: right;
+  margin-top: 23px;
+  outline: 2px solid #ffffff;
 }
 
 .user-block > div {
@@ -97,15 +100,21 @@ body {
   display: none;
 }
 
+.page-header-container {
+   display: block; 
+   outline: 2px solid #FFFFFF;
+   margin-bottom: 10px;
+}
+
 .breadcrumb {
   float: left;
   list-style: none;
+  margin-top: 12px;
 }
 
 .breadcrumb li {
   display: inline-block;
   list-style-type: none;
-  margin-top: 20px;
 }
 
 .breadcrumb li:not(:last-child)::after {
@@ -114,19 +123,36 @@ body {
 
 .main-info {
   position: relative;
+  margin-top: -10px;
   z-index: 1;
   float: right;
   width: 170px;
   text-align: right;
-  background-color: #D4D4D4;
+  outline: 2px solid #ffffff;
 }
 
 .carusel {
   position: relative;
+  width: auto;
+  height: 1020px;
+  margin-bottom: -450px;
   z-index: 0;
-  top: -40px;
-  background-color: #F7DEDE;
-  background-color: rgba(255,187,187,0.50);
+  top: -80px;  
+}
+
+.slide_1 {
+  background-image: url('../img/light_1.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slide_2 {
+  background-image: url('../img/light_1.png');
+}
+
+.slide_2 {
+  background-image: url('../img/light_1.png');
 }
 
 .carusel img {
@@ -136,6 +162,8 @@ body {
 
 .carusel-item {
   display: none;
+  padding-top: 82px;
+  
 }
 
 .carusel-item.active {
@@ -167,7 +195,7 @@ body {
   background-color: #BD8C8D;
   list-style: none;
   position: absolute;
-  bottom: 24px;
+  top: 562px;
   left: 10px;
   width: 80px;
   min-height: 25px;
@@ -177,29 +205,18 @@ body {
   display: inline-block;
 }
 
-.index {
-  background-color: #FBFAA5;
-  margin-top: -5px;
-}
-
-.page {
-  background-color: #FBFAA5;
-  padding-top: 12px;
-}
-
 .banners {
   position: relative;
   z-index: 2;
-
 }
 
 .banners-container {
   width: 46.6%;
   min-height: 230px;
   float: left;
-  background-color: #F8C6F3;  
   margin-right: 2.2%;
   margin-bottom: 40px;
+  outline: 2px solid #ffffff;
 }
 
 .banners-container:last-child {
@@ -225,16 +242,19 @@ body {
 }
 
 .catalog {
-  background-color: #FFFFFF;
+  outline: 2px solid #ffffff;
   text-align:center;
-  margin-bottom: 40px;
+  font-size: 0px;
 }
 
 .catalog-item {
   display: inline-block;
   vertical-align: top;
-  max-width: 22.2%;
+  width: 22.2%;
   margin-right: 2.2%;
+  margin-bottom: 40px;
+  font-size: 16px;
+  outline: 2px solid #ffffff;
 }
 
 .catalog-item:nth-child(4n) {
@@ -242,31 +262,40 @@ body {
 }
 
 .catalog-item img {
-  max-width: 100%;
+  width: 100%;
+}
+
+.catalog-item-bg {
+  display: none;
 }
 
 .catalog-paginator {
   width: 190px;
   float: right;
-  margin-top: 82px;
+  margin-top: 80px;
   margin-bottom: 30px;
-  background-color: #93F0F1;
+  outline: 2px solid #ffffff;
 }
 
 .features {
-  background-color: #FFD689;
+  outline: 2px solid #ffffff;
   min-height: 248px;
   padding: 30px 20px;
   margin-bottom: 40px;
 }
 
+.features-container {
+  display: block;
+  outline: 2px solid #3BE1DF;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
 .features-item {
-  display: inline-block;
-  vertical-align: top;
+  float: left;
   width: 46.6%;
   margin-right: 2.2%;
-  margin-bottom: 15px;
-  background-color: #C96B23;
+  outline: 2px solid #ffffff;
 }
 
 .features-item:nth-child(2n) {
@@ -275,11 +304,11 @@ body {
 }
 
 .blog {
-  background-color: #8BE1B3;
+  outline: 2px solid #ffffff;
 }
 
 .blog > div {
-  background-color: #E8E8E8;
+  outline: 2px solid #ffffff;
   width: 46.6%;
   min-height: 220px;
   float: left;
@@ -316,7 +345,6 @@ body {
 
 
 footer {
-  background-color: #838383;
   line-height: 18px;
   min-height: 103px;
 }
