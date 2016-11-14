@@ -213,7 +213,7 @@ a img {
 .header-button {
   display: inline-block;
   vertical-align: middle;
-  background-color: #a1b4a9;
+  background-color: rgba(255,255,255,0.2);
   position: relative;
   font-size: 14px;
   line-height: 16px;
@@ -260,7 +260,6 @@ a img {
 .user-login-block:hover .sign-block,
 .user-cart-block:hover .cart-full+.cart-block {
   display: block;
-
   margin-top: 5px;
 }
 
