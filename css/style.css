@@ -178,7 +178,7 @@ a img {
   font-weight: bold;
 }
 
-.submenu-item a:hover {
+.submenu-item a:not(.active):hover {
   border: none;
   background-color: #fbded7;
   border-radius: 0;
@@ -331,11 +331,13 @@ input, textarea {
 
 input:hover, textarea:hover {
   box-shadow: 0 0 0 2px rgba(152,152,152,0.52);
+  border: none;
 }
 
 input:focus, textarea:focus {
   box-shadow: 0 0 0 2px rgba(46,136,228,0.52);
-  outline:none;
+  outline: none;
+  border: none;
 }
 
 
@@ -814,10 +816,14 @@ select[name='sortlist'] {
   padding: 7px 12px;
   font: inherit;
   color: #fff;
-  appearance:none;
   -moz-appearance:none; 
   -webkit-appearance:none; 
+  appearance:none;
   background: #aabcb2 url('../img/white-marker.png') no-repeat 170px center;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 
