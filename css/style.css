@@ -330,14 +330,16 @@ input, textarea {
 }
 
 input:hover, textarea:hover {
-  box-shadow: 0 0 0 2px rgba(152,152,152,0.52);
-  border: none;
+  box-shadow: 0 0 0 1px rgba(152,152,152,0.52);
+  border: 1px solid rgba(152,152,152,0.52);
+  /*border: none;*/
 }
 
 input:focus, textarea:focus {
   box-shadow: 0 0 0 2px rgba(46,136,228,0.52);
+  border: 1px solid rgba(46,136,228,0.52);
   outline: none;
-  border: none;
+  /*border: none;*/
 }
 
 
