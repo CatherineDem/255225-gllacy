@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <input type="radio" name="carusel-input" id="carusel-slide1" checked>
@@ -212,7 +213,7 @@
                   <label for="useremail">Ваша почта для ответа?</label>
                 </div>
                 <div class="block-textarea">
-                  <textarea name="usermessage" id="usermessage" cols="20" rows="6" required>Напишите что-нибудь...</textarea>
+                  <textarea name="usermessage" id="usermessage" cols="20" rows="6" placeholder="Напишите что-нибудь..." required></textarea>
                   <label for="usermessage">Напишите что-нибудь...</label>                
                 </div>
                 <div class="feedback-button">
@@ -221,20 +222,24 @@
               </form>
             </div>
           </div>
-          <div class="container location">
-            <div class="location-address">
-              <span>Адрес главного офиса и офлайн магазина:</span>
-              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-              <div>
-                <span>Для заказов по телефону:</span>
-                <b>8 812 450-25-25</b>
-                <span>(с 10 до 20 ежедневно)</span>
-              </div>
-              <a class="btn" href="#">Форма обратной связи</a>
-            </div>
-          </div>
         </main>
+      </div>
+              
+      <div class="content-container location">
+        <div class="location-address">
+          <span>Адрес главного офиса и офлайн магазина:</span>
+          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          <div>
+            <span>Для заказов по телефону:</span>
+            <b>8 812 450-25-25</b>
+            <span>(с 10 до 20 ежедневно)</span>
+          </div>
+          <a class="feedback-show btn" href="#">Форма обратной связи</a>
+        </div>
+      </div>
+      <div class="map" id="map"></div>        
         
+      <div class="content-container"> 
         <footer>
           <div class="container clearfix">
             <div class="footer">
@@ -280,5 +285,6 @@
       </div>
     </div>
     <div class="modal-overlay"></div>
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
