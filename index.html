@@ -5,7 +5,7 @@
     <title>Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
@@ -188,7 +188,7 @@
               <div class="blog-subscribe-bg">
                 <div class="blog-subscribe">
                   <p class="blog-subscribe-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-                  <form name="subscribe" method="post" action="/">
+                  <form name="subscribe" method="post" action="/subscribe">
                     <button type="submit" class="btn">Отправить</button>
                     <div class=" subscribe-email">
                       <div class="block-input">
@@ -203,7 +203,7 @@
             <div class="feedback forms">
               <button class="modal-close-btn" type="button" title="Закрыть">Закрыть</button>
               <div class="feedback-header">Мы обязательно вам ответим!</div>
-              <form name="feedback" action="/" method="post">
+              <form name="feedback" action="/feedback" method="post">
                 <div class="block-input">
                   <input type="text" name="username" id="username" placeholder="Как вас зовут?" required>
                   <label for="username">Как вас зовут?</label>
@@ -234,7 +234,7 @@
             <b>8 812 450-25-25</b>
             <span>(с 10 до 20 ежедневно)</span>
           </div>
-          <a class="feedback-show btn" href="#">Форма обратной связи</a>
+          <a class="feedback-show btn" href="/feedback">Форма обратной связи</a>
         </div>
       </div>
       <div class="map" id="map"></div>        
@@ -285,6 +285,6 @@
       </div>
     </div>
     <div class="modal-overlay"></div>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script.min.js" type="text/javascript"></script>
   </body>
 </html>

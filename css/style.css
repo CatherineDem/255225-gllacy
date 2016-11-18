@@ -19,6 +19,32 @@ body {
   background-color: #849d8f;
 }
 
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes label-popup {
+  0%    {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100%  {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .main-header {
   width: auto;
 }
@@ -44,7 +70,6 @@ body {
 .site-wrapper:after {
   background-image: url("../img/slide3_bg.png");
 }
-
 
 .content-container {
   max-width: 1200px;
@@ -84,7 +109,6 @@ a img {
   background-repeat: no-repeat
 }
 
-
 .main-navigation {
   position: relative;
   z-index:6;
@@ -116,7 +140,6 @@ a img {
   display: block;
   padding: 8px 12px;
 }
-
 
 .mainmenu-item:hover>a {
   background-color: #f8f7f4;
@@ -294,12 +317,10 @@ a img {
   width: 21px;
 }
 
-
 .user-search-block, .user-login-block, .user-cart-block {
   position: relative;
   padding-bottom: 10px;
 }
-
 
 .search-block {
   display: none;
@@ -332,16 +353,13 @@ input, textarea {
 input:hover, textarea:hover {
   box-shadow: 0 0 0 1px rgba(152,152,152,0.52);
   border: 1px solid rgba(152,152,152,0.52);
-  /*border: none;*/
 }
 
 input:focus, textarea:focus {
   box-shadow: 0 0 0 1px rgba(46,136,228,0.52);
   border: 1px solid rgba(46,136,228,0.52);
   outline: none;
-  /*border: none;*/
 }
-
 
 .block-input, .block-textarea {
   display: table;
@@ -365,6 +383,8 @@ input:focus, textarea:focus {
  
 .block-input input:focus + label,
 .block-textarea textarea:focus + label {
+  animation-name: label-popup;
+  animation-duration: 1s;
   display: table-header-group;
 }
 
@@ -445,23 +465,6 @@ input:focus, textarea:focus {
 
 button {
   border: none;
-}
-
-/* Всплывающая форма */
-
-@keyframes bounce {
-  0%   {
-    transform: translateY(-2000px);
-  }
-  70%  {
-    transform: translateY(30px);
-  }
-  90%  {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .modal-overlay {
@@ -600,7 +603,6 @@ button {
   padding-right: 0px;
 }
 
-
 .user-cart .total {
   text-align: right;
   font-weight: bold;
@@ -612,7 +614,6 @@ button {
 .cart-block .btn {
   float: right;
 }
-
 
 .page-header-container {
    display: block; 
@@ -849,12 +850,12 @@ select[name='sortlist'] {
   -webkit-appearance:none; 
   appearance:none;
   background: #aabcb2 url('../img/white-marker.png') no-repeat 170px center;
+  cursor: pointer;
 }
 
 select::-ms-expand {
     display: none;
 }
-
 
 select[name='sortlist']:hover {
   background: #fff url('../img/black-marker.png') no-repeat 170px center;
@@ -908,7 +909,6 @@ select[name='sortlist']:hover {
   margin-right: 0px;
 }
 
-
 .filters-item-header {
   color: #fff;
   font-size: 14px;
@@ -930,16 +930,12 @@ select[name='sortlist']:hover {
   display: none;
 }
 
-.filter-item-radio input+label, .filter-item-checkbox input+label {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-
 .filter-item-radio label, .filter-item-checkbox label {
   position: relative;
   font: inherit;
   padding-left: 30px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .filter-item-radio label::before {
@@ -977,12 +973,12 @@ select[name='sortlist']:hover {
 
 .filter-item-radio input[name='fats']:not(:disabled)+label:hover::before {
   border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .filter-item-checkbox:not(:last-child) {
   margin-right: 20px;
 }
-
 
 .filter-item-checkbox label::before {
   content: '';
@@ -996,12 +992,10 @@ select[name='sortlist']:hover {
   left: 0;
 }
 
-
 .filter-item-checkbox input[name^='filter-']:not(checked)+label::after {
   content: '';
   display: none;
   width: 14px;
-
   height: 10px;
   top: 4px;
   left: 3px;
@@ -1020,8 +1014,8 @@ select[name='sortlist']:hover {
 
 .filter-item-checkbox input[name^='filter-']:not(:disabled)+label:hover::before {
   border: 2px solid #fff;
+  cursor: pointer;
 }
-
 
 .filter-btn {
   display: inline-block;
@@ -1041,6 +1035,7 @@ select[name='sortlist']:hover {
 .filter-btn:hover {
   background-color: #fff;
   color: #323232;
+  cursor: pointer;
 }
 
 .filter-btn:active {
@@ -1123,13 +1118,11 @@ select[name='sortlist']:hover {
 
 .catalog-item:hover .catalog-overlay {
   display: block;
-  
 }
 
 .catalog-item:not(:hover) {
   z-index:0;
 }
-
 
 .catalog-item-price {
   position: absolute;
@@ -1170,7 +1163,6 @@ select[name='sortlist']:hover {
   cursor: pointer;
 }
 
-
 .catalog-paginator {
   width: 190px;
   float: right;
@@ -1178,7 +1170,6 @@ select[name='sortlist']:hover {
   margin-bottom: 30px;
   white-space: nowrap;
 }
-
 
 .catalog-paginator .current {
   background-color: #fff;
@@ -1378,16 +1369,6 @@ select[name='sortlist']:hover {
   z-index: 1;
 }
 
-.location::before {
-  content: '';
-  position: absolute;
-  left: 266px;
-  top: 138px;
-  width: 218px;
-  height: 142px;
-  background:url('../img/marker.png') no-repeat;
-}
-
 .location-address {
   background-color: #fefefe;
   border-radius: 18px;
@@ -1559,4 +1540,3 @@ select[name='sortlist']:hover {
   font-weight: bold;
   margin-top: 0;
 }
-
