@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic,latin-ext" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <input type="radio" name="carusel-input" id="carusel-slide1" checked>
@@ -54,31 +53,35 @@
                 <a class="header-button search" href="#">Поиск</a>
                 <div class="search-block forms">
                   <div class="block-input">
-                    <input type="search" placeholder="Что ищем?" name="search-input" id="search-input" required>
-                    <label for="search-input">Что ищем?</label>
+                    <form action="/serach" method="get">
+                      <input type="search" placeholder="Что ищем?" name="search-input" id="search-input" required>
+                      <label for="search-input">Что ищем?</label>
+                    </form>
                   </div>
                 </div>
               </div>
               <div class="user-login-block">
-                <a class="header-button login" href="#">Вход</a>
+                <a class="header-button login" href="/enter">Вход</a>
                 <div class="sign-block forms">
-                  <div class="block-input">
-                    <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта" required>
-                    <label for="sing-email-input">Электронная почта</label>
-                  </div>
-                  <div class="block-input">
-                    <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль" required>
-                    <label for="sign-password-input">Пароль</label>
-                  </div>
-                  <div class="forms-wrapper">
-                    <div class="sign-block-btn">
-                      <a class="btn" href="#">Войти</a>
+                  <form action="/enter" method="post">
+                    <div class="block-input">
+                      <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта" required>
+                      <label for="sing-email-input">Электронная почта</label>
                     </div>
-                    <div class="sign-block-links">
-                      <a class="sign-block-link" href="#">Забыли пароль?</a>
-                      <a class="sign-block-link" href="#">Новая регистрация</a>
+                    <div class="block-input">
+                      <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль" required>
+                      <label for="sign-password-input">Пароль</label>
                     </div>
-                  </div>
+                    <div class="forms-wrapper">
+                      <div class="sign-block-btn">
+                        <button class="btn" type="submit">Войти</button>
+                      </div>
+                      <div class="sign-block-links">
+                        <a class="sign-block-link" href="#">Забыли пароль?</a>
+                        <a class="sign-block-link" href="#">Новая регистрация</a>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
               <div class="user-cart-block">
@@ -164,18 +167,18 @@
               <div class="features-header">Магазин Глейси &nbsp;— это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</div>
               <div class="features-container clearfix">
                 <div class="features-item icecream">
-                  <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                  Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
                 </div>
                 <div class="features-item cow">
-                  <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                  Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
                 </div>
               </div>
               <div class="features-container clearfix">
                 <div class="features-item leaf">
-                  <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                  Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                 </div>
                 <div class="features-item therm">
-                  <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                  Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
                 </div>   
               </div>
             </div>
@@ -229,11 +232,9 @@
         <div class="location-address">
           <span>Адрес главного офиса и офлайн магазина:</span>
           <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          <div>
-            <span>Для заказов по телефону:</span>
-            <b>8 812 450-25-25</b>
-            <span>(с 10 до 20 ежедневно)</span>
-          </div>
+          <span class="tel">Для заказов по телефону:</span>
+          <b>8 812 450-25-25</b>
+          <span>(с 10 до 20 ежедневно)</span>
           <a class="feedback-show btn" href="/feedback">Форма обратной связи</a>
         </div>
       </div>
@@ -241,50 +242,45 @@
         
       <div class="content-container"> 
         <footer>
-          <div class="container clearfix">
-            <div class="footer">
-              <div class="footer-wrapper">
-                <div class="footer-social">
-                  <a class="social-btn social-btn-tw" href="#">Твиттер</a>
-                  <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-                  <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-                  <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-                </div>
+          <div class="container footer clearfix">
+            <div class="footer-wrapper">
+              <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+              <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+              <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+              <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+            </div>
+            <div class="footer-wrapper center">
+              <div class="footer-info">
+                <ul class="footer-info-list">
+                  <li class="favorite">
+                    <a href="#">Для поставщиков</a>
+                  </li>
+                  <li>
+                    <a href="#">О производстве</a>
+                  </li>
+                </ul>
+                <ul class="footer-info-list">
+                  <li>
+                    <a href="#">Наши документы</a>
+                  </li>
+                  <li>
+                    <a href="#">Экологические страндарты</a>
+                  </li>
+                </ul>
               </div>
-              <div class="footer-wrapper center">
-                <div class="footer-info">
-                  <ul class="footer-info-list">
-                    <li class="favorite">
-                      <a href="#">Для поставщиков</a>
-                    </li>
-                    <li>
-                      <a href="#">О производстве</a>
-                    </li>
-                  </ul>
-                  <ul class="footer-info-list">
-                    <li>
-                      <a href="#">Наши документы</a>
-                    </li>
-                    <li>
-                      <a href="#">Экологические страндарты</a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div class="footer-wrapper">
+              <div class="footer-copyright">
+                <img class="copyright-logo" src="img/htmlacademy_logo.png" alt="HTML Academy">
+                <p>Сделано в <a class="minlink" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>               
               </div>
-              <div class="footer-wrapper">
-                <div class="footer-copyright">
-                  <div class="footer-copyright-wrapper">
-                    <img class="copyright-logo" src="img/htmlacademy_logo.png" alt="HTML Academy">
-                    <p>Сделано в <a class="minlink" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>
-                  </div>
-                </div>
-              </div>
-            </div>  
+            </div>
           </div>
         </footer>
       </div>
     </div>
     <div class="modal-overlay"></div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.min.js" type="text/javascript"></script>
   </body>
 </html>
