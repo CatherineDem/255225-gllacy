@@ -164,14 +164,18 @@ a img {
   padding-bottom: 10px;
 }
 
-.mainmenu-item a {
+.mainmenu-item > a {
   display: block;
-  padding: 8px 12px;
-  text-decoration: underline;
+  margin: 8px 12px;
+  padding: 0;
+  text-decoration: none;
   color: #ffffff;  
+  border-bottom: 1px solid rgba(255,255,255,0.20);
 }
 
 .mainmenu-item:hover > a {
+  margin: 0;
+  padding: 8px 12px;
   text-decoration: none;
   color: #323232;
   background-color: #f8f7f4;
@@ -186,6 +190,7 @@ a img {
 
 .mainmenu-item .active {
   display: block;
+  margin: 0;
   padding: 8px 12px;
   text-decoration: none;
   color: #ffffff;
@@ -1535,19 +1540,19 @@ input[name^='filter-']:not(:disabled) + label:hover::before {
 }
 
 .footer-info a {
+  display: inline-block;
+  vertical-align: baseline;
   font-size: 13px;
   line-height: 18px;
-  color: rgba(255,255,255,0.20);
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255,255,255,0.20);
 }
 
 .footer a:hover, 
-.footer a:active,
-.link-underline:hover {
+.footer a:active {
   color: #ffbc9e;
-}
-
-.link-underline {
-  color: #ffffff;
+  border-bottom: 1px solid #ffbc9e;
 }
 
 .footer-copyright {
@@ -1560,7 +1565,9 @@ input[name^='filter-']:not(:disabled) + label:hover::before {
 }
 
 .minlink {
+  text-decoration: none;
   color: #ffffff;
+  border-bottom: 1px solid rgba(255,255,255,0.20);
 }
 
 .page-header {
