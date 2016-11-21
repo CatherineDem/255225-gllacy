@@ -12,7 +12,7 @@
       <header class="main-header">
         <div class="container clearfix">
           <div class="main-logo">
-            <a href="index.html"><img src="img/logo.svg" alt="Глейси"></a>
+            <a href="index.html"><img src="img/logo.svg" alt="Глейси" width="153" height="64"></a>
           </div>
           <nav class="main-navigation">
             <ul class="mainmenu">
@@ -49,31 +49,33 @@
               <a class="header-button search" href="#">Поиск</a>
               <div class="search-block forms">
                 <div class="block-input">
-                  <input type="search" placeholder="Что ищем?" name="search-input" id="search-input" required>
-                  <label for="search-input">Что ищем?</label>
+                  <form action="/serach" method="get">
+                    <input type="search" placeholder="Что ищем?" name="search-input" id="search-input" required>
+                    <label for="search-input">Что ищем?</label>
+                  </form>
                 </div>
               </div>
             </div>
             <div class="user-login-block">
-              <a class="header-button login" href="#">Вход</a>
+              <a class="header-button login" href="/enter">Вход</a>
               <div class="sign-block forms">
-                <div class="block-input">
-                  <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта" required>
-                  <label for="sing-email-input">Электронная почта</label>
-                </div>
-                <div class="block-input">
-                  <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль" required>
-                  <label for="sign-password-input">Пароль</label>
-                </div>
-                <div class="forms-wrapper">
-                  <div class="sign-block-btn">
-                    <a class="btn" href="#">Войти</a>
+                <form action="/enter" method="post">
+                  <div class="block-input">
+                    <input type="email" name="sing-email-input" id="sing-email-input" placeholder="Электронная почта" required>
+                    <label for="sing-email-input">Электронная почта</label>
                   </div>
-                  <div class="sign-block-links">
-                    <a class="sign-block-link" href="#">Забыли пароль?</a>
-                    <a class="sign-block-link" href="#">Новая регистрация</a>
+                  <div class="block-input">
+                    <input type="password" name="sign-password-input" id="sign-password-input" placeholder="Пароль" required>
+                    <label for="sign-password-input">Пароль</label>
                   </div>
-                </div>
+                  <div class="forms-wrapper">
+                    <button class="btn" type="submit">Войти</button>
+                    <div class="sign-block-links">
+                      <a class="sign-block-link" href="#">Забыли пароль?</a>
+                      <a class="sign-block-link" href="#">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="user-cart-block">
@@ -102,7 +104,7 @@
                     <td colspan="3" class="total">Итого: 750 руб.</td>
                   </tr>
                 </table>
-                <a class="btn" href="#">Оформить заказ</a>
+                <a class="btn" href="cart.html">Оформить заказ</a>
               </div>
             </div>
           </div>         
@@ -302,24 +304,24 @@
           </div>
           <div class="catalog-paginator">
             <a class="prev disabled" href="#prev"></a>
-            <a class="current">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
+            <a class="current pages">1</a>
+            <a class="pages" href="#">2</a>
+            <a class="pages" href="#">3</a>
+            <a class="pages" href="#">4</a>
+            <a class="pages" href="#">5</a>
             <a class="next" href="#next"></a>
           </div>
         </div>
       </main>
       <footer>
           <div class="container footer clearfix">
-            <div class="footer-wrapper">
+            <div class="footer-wrapper left-column">
               <a class="social-btn social-btn-tw" href="#">Твиттер</a>
               <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
               <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
               <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
             </div>
-            <div class="footer-wrapper center">
+            <div class="footer-wrapper center-column">
               <div class="footer-info">
                 <ul class="footer-info-list">
                   <li class="favorite">
@@ -342,7 +344,7 @@
             <div class="footer-wrapper">
               <div class="footer-copyright">
                 <div class="footer-copyright-wrapper">
-                  <img class="copyright-logo" src="img/htmlacademy_logo.png" alt="HTML Academy">
+                  <img class="copyright-logo" src="img/htmlacademy_logo.png" alt="HTML Academy" width="108" height="38">
                   <p>Сделано в <a class="minlink" href="https://htmlacademy.ru">HTML Academy</a> &#169; 2016</p>
                 </div>
               </div>
