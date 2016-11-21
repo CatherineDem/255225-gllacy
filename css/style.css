@@ -1466,6 +1466,7 @@ input[name^='filter-']:not(:disabled) + label:hover::before {
   height: 31px;
   margin-right: 10px;
   font-size: 0px;
+  text-decoration: none;
   background: url('../img/sprite.png') no-repeat 50% 50%;
   border: 2px solid #c2cec7;
   border-radius: 50%;
@@ -1549,8 +1550,10 @@ input[name^='filter-']:not(:disabled) + label:hover::before {
   border-bottom: 1px solid rgba(255,255,255,0.20);
 }
 
-.footer a:hover, 
-.footer a:active {
+.footer-info-list a:hover, 
+.footer-info-list a:active,
+.footer-copyright a:hover,
+.footer-copyright a:active {
   color: #ffbc9e;
   border-bottom: 1px solid #ffbc9e;
 }
@@ -1564,7 +1567,7 @@ input[name^='filter-']:not(:disabled) + label:hover::before {
   color: #ffffff;
 }
 
-.minlink {
+.footer-copyright a {
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255,255,255,0.20);
